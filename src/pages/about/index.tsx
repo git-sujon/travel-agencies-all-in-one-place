@@ -23,13 +23,13 @@ const AboutPage = () => {
             backgroundSize: "cover",
           }}
         >
-          <div className="p-12 bg-gradient-to-t from-black h-[600px]">
-            <h1 className="lg:text-6xl text-xl text-neutral-300 font-bold">
+          <div className="p-32 bg-gradient-to-t from-black h-[600px]">
+            <h1 className="lg:text-6xl text-xl text-white font-bold">
               About Us
               <br />
               Pioneer in hospitality industry
             </h1>
-            <p className="lg:text-2xl font bold text-neutral-300">
+            <p className="lg:text-2xl font bold text-white">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat
               quod quidem quae facere, accusantium recusandae?
               <br />
@@ -115,8 +115,8 @@ const AboutPage = () => {
         <div className="text-center my-10">
           <h2 className="font-bold text-4xl mb-8">Most trusted Guides</h2>
           <p className="text-xl">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            Praesentium quod suscipit atque dolore aspernatur ipsum perspiciatis
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. <br />
+            Praesentium quod suscipit atque dolore aspernatur ipsum perspiciatis <br />
             fugit nisi autem obcaecati?
           </p>
         </div>
@@ -323,12 +323,12 @@ const AboutPage = () => {
           </SwiperSlide>
         </Swiper>
       </div>
-      <div>
+      <div className="py-16">
         <div className="text-center my-10">
           <h2 className="font-bold text-4xl mb-8">Our Tourist Locations</h2>
           <p className="text-xl">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            Praesentium quod suscipit atque dolore aspernatur ipsum perspiciatis
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. <br />
+            Praesentium quod suscipit atque dolore aspernatur ipsum perspiciatis <br />
             fugit nisi autem obcaecati?
           </p>
         </div>
