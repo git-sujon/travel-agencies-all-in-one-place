@@ -1,31 +1,54 @@
 import Image from "next/image";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState } from "react";
 // Import Swiper React components
-import { Swiper, SwiperSlide,} from 'swiper/react';
+import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/pagination';
+import "swiper/css";
+import "swiper/css/pagination";
 // import required modules
-import { Pagination } from 'swiper/modules';
+import { Pagination } from "swiper/modules";
 import Marquee from "react-fast-marquee";
 
 const AboutPage = () => {
   return (
     <div className="">
       <div>
-        <Image
-          width={1980}
-          height={500}
-          src="/images/banner.jpg"
-          alt="banner image"
-        />
+        <div
+          className=" text-center"
+          style={{
+            backgroundImage: `url("/images/banner.jpg")`,
+            backgroundPosition: "center",
+            backgroundAttachment: "fixed",
+            backgroundSize: "cover",
+          }}
+        >
+          <div className="p-12 bg-gradient-to-t from-black h-[600px]">
+            <h1 className="lg:text-6xl text-xl text-neutral-300 font-bold">
+              About Us
+              <br />
+              Pioneer in hospitality industry
+            </h1>
+            <p className="lg:text-2xl font bold text-neutral-300">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat quod quidem quae facere, accusantium recusandae?
+              <br />
+              We serve experience, quality & hermony since 1995.
+            </p>
+          </div>
+        </div>
       </div>
-      <div className="mx-auto max-w-7xl">
+      <div className="mx-auto max-w-7xl my-8">
         <div className="grid grid-cols-2">
           <div>
-
-            {/* grid */}
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/vNQR3ixE8AE?si=v0DBacojksBu4YLK"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
           </div>
           <div className="text-center">
             <h2 className="font-bold text-4xl">
@@ -88,101 +111,225 @@ const AboutPage = () => {
         </div>
       </div>
       <div>
-      <Swiper
-        slidesPerView={4}
-        centeredSlides={true}
-        spaceBetween={30}
-       
-
-        grabCursor={true}
-        pagination={{
-          clickable: true,
-        }}
-        modules={[Pagination, ]}
-        className="mySwiper"
-      >
-        <SwiperSlide><div className="max-w-sm rounded overflow-hidden shadow-lg">
-  <Image width={400} height={500} src="/images/guide1.jpg" alt="guide"/>
-  <div className="px-6 py-4">
-    <div className="font-bold text-xl mb-2">The Coldest Sunset</div>
-    <p className="text-gray-700 text-base">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
-    </p>
-  </div>
-  <div className="px-6 pt-4 pb-2">
-    <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
-    <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
-    <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
-  </div>
-</div></SwiperSlide>
-        <SwiperSlide><div className="max-w-sm rounded overflow-hidden shadow-lg">
-  <Image width={400} height={500} src="/images/guide2.jpg" alt="guide"/>
-  <div className="px-6 py-4">
-    <div className="font-bold text-xl mb-2">The Coldest Sunset</div>
-    <p className="text-gray-700 text-base">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
-    </p>
-  </div>
-  <div className="px-6 pt-4 pb-2">
-    <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
-    <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
-    <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
-  </div>
-</div></SwiperSlide>
-        <SwiperSlide><div className="max-w-sm rounded overflow-hidden shadow-lg">
-  <Image width={400} height={500} src="/images/guide3.jpg" alt="guide"/>
-  <div className="px-6 py-4">
-    <div className="font-bold text-xl mb-2">The Coldest Sunset</div>
-    <p className="text-gray-700 text-base">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
-    </p>
-  </div>
-  <div className="px-6 pt-4 pb-2">
-    <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
-    <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
-    <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
-  </div>
-</div></SwiperSlide>
-        <SwiperSlide><div className="max-w-sm rounded overflow-hidden shadow-lg">
-  <Image width={400} height={500} src="/images/guide4.jpg" alt="guide"/>
-  <div className="px-6 py-4">
-    <div className="font-bold text-xl mb-2">The Coldest Sunset</div>
-    <p className="text-gray-700 text-base">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
-    </p>
-  </div>
-  <div className="px-6 pt-4 pb-2">
-    <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
-    <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
-    <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
-  </div>
-</div></SwiperSlide>
-        <SwiperSlide><div className="max-w-sm rounded overflow-hidden shadow-lg">
-  <Image width={400} height={500} src="/images/guide5.jpg" alt="guide"/>
-  <div className="px-6 py-4">
-    <div className="font-bold text-xl mb-2">The Coldest Sunset</div>
-    <p className="text-gray-700 text-base">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
-    </p>
-  </div>
-  <div className="px-6 pt-4 pb-2">
-    <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
-    <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
-    <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
-  </div>
-</div></SwiperSlide>
-      </Swiper>
+        <div className="text-center my-10">
+          <h2 className="font-bold text-4xl mb-8">Most trusted Guides</h2>
+          <p className="text-xl">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Praesentium quod suscipit atque dolore aspernatur ipsum perspiciatis
+            fugit nisi autem obcaecati?
+          </p>
+        </div>
+        <Swiper
+          slidesPerView={4}
+          centeredSlides={true}
+          spaceBetween={30}
+          grabCursor={true}
+          pagination={{
+            clickable: true,
+          }}
+          modules={[Pagination]}
+          className="mySwiper"
+        >
+          <SwiperSlide>
+            <div className="max-w-sm rounded overflow-hidden shadow-lg">
+              <Image
+                width={400}
+                height={500}
+                src="/images/guide1.jpg"
+                alt="guide"
+              />
+              <div className="px-6 py-4">
+                <div className="font-bold text-xl mb-2">Michale John</div>
+                <p className="text-gray-700 text-base">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Voluptatibus quia, nulla! Maiores et perferendis eaque,
+                  exercitationem praesentium nihil.
+                </p>
+              </div>
+              <div className="px-6 pt-4 pb-2">
+                <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+                  #photography
+                </span>
+                <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+                  #travel
+                </span>
+                <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+                  #winter
+                </span>
+              </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="max-w-sm rounded overflow-hidden shadow-lg">
+              <Image
+                width={400}
+                height={500}
+                src="/images/guide2.jpg"
+                alt="guide"
+              />
+              <div className="px-6 py-4">
+                <div className="font-bold text-xl mb-2">Thomas Adam</div>
+                <p className="text-gray-700 text-base">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Voluptatibus quia, nulla! Maiores et perferendis eaque,
+                  exercitationem praesentium nihil.
+                </p>
+              </div>
+              <div className="px-6 pt-4 pb-2">
+                <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+                  #photography
+                </span>
+                <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+                  #travel
+                </span>
+                <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+                  #winter
+                </span>
+              </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="max-w-sm rounded overflow-hidden shadow-lg">
+              <Image
+                width={400}
+                height={500}
+                src="/images/guide3.jpg"
+                alt="guide"
+              />
+              <div className="px-6 py-4">
+                <div className="font-bold text-xl mb-2">Mark Antony</div>
+                <p className="text-gray-700 text-base">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Voluptatibus quia, nulla! Maiores et perferendis eaque,
+                  exercitationem praesentium nihil.
+                </p>
+              </div>
+              <div className="px-6 pt-4 pb-2">
+                <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+                  #photography
+                </span>
+                <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+                  #travel
+                </span>
+                <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+                  #winter
+                </span>
+              </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="max-w-sm rounded overflow-hidden shadow-lg">
+              <Image
+                width={400}
+                height={500}
+                src="/images/guide4.jpg"
+                alt="guide"
+              />
+              <div className="px-6 py-4">
+                <div className="font-bold text-xl mb-2">Bill Thomas</div>
+                <p className="text-gray-700 text-base">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Voluptatibus quia, nulla! Maiores et perferendis eaque,
+                  exercitationem praesentium nihil.
+                </p>
+              </div>
+              <div className="px-6 pt-4 pb-2">
+                <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+                  #photography
+                </span>
+                <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+                  #travel
+                </span>
+                <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+                  #winter
+                </span>
+              </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="max-w-sm rounded overflow-hidden shadow-lg">
+              <Image
+                width={400}
+                height={500}
+                src="/images/guide5.jpg"
+                alt="guide"
+              />
+              <div className="px-6 py-4">
+                <div className="font-bold text-xl mb-2">Carl Urban</div>
+                <p className="text-gray-700 text-base">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Voluptatibus quia, nulla! Maiores et perferendis eaque,
+                  exercitationem praesentium nihil.
+                </p>
+              </div>
+              <div className="px-6 pt-4 pb-2">
+                <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+                  #photography
+                </span>
+                <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+                  #travel
+                </span>
+                <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+                  #winter
+                </span>
+              </div>
+            </div>
+          </SwiperSlide>
+        </Swiper>
       </div>
       <div>
-      <Marquee>
-        <Image width={350} height={400} src="/images/place1.jpg" alt="location"/>
-        <Image width={350} height={400} src="/images/place2.jpg" alt="location"/>
-        <Image width={350} height={400} src="/images/place3.jpg" alt="location"/>
-        <Image width={350} height={400} src="/images/place4.jpg" alt="location"/>
-        <Image width={350} height={400} src="/images/place5.jpg" alt="location"/>
-        <Image width={350} height={400} src="/images/place6.jpg" alt="location"/>
-        <Image width={350} height={400} src="/images/place7.jpg" alt="location"/>
-  </Marquee>
+        <div className="text-center my-10">
+          <h2 className="font-bold text-4xl mb-8">Our Tourist Locations</h2>
+          <p className="text-xl">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Praesentium quod suscipit atque dolore aspernatur ipsum perspiciatis
+            fugit nisi autem obcaecati?
+          </p>
+        </div>
+        <Marquee>
+          <Image
+            width={350}
+            height={400}
+            src="/images/place1.jpg"
+            alt="location"
+          />
+          <Image
+            width={350}
+            height={400}
+            src="/images/place2.jpg"
+            alt="location"
+          />
+          <Image
+            width={350}
+            height={400}
+            src="/images/place3.jpg"
+            alt="location"
+          />
+          <Image
+            width={350}
+            height={400}
+            src="/images/place4.jpg"
+            alt="location"
+          />
+          <Image
+            width={350}
+            height={400}
+            src="/images/place5.jpg"
+            alt="location"
+          />
+          <Image
+            width={350}
+            height={400}
+            src="/images/place6.jpg"
+            alt="location"
+          />
+          <Image
+            width={350}
+            height={400}
+            src="/images/place7.jpg"
+            alt="location"
+          />
+        </Marquee>
       </div>
     </div>
   );
