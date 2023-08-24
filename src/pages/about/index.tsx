@@ -8,6 +8,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 // import required modules
 import { Pagination } from 'swiper/modules';
+import Marquee from "react-fast-marquee";
 
 const AboutPage = () => {
   return (
@@ -173,7 +174,15 @@ const AboutPage = () => {
       </Swiper>
       </div>
       <div>
-        
+      <Marquee>
+        <Image width={350} height={400} src="/images/place1.jpg" alt="location"/>
+        <Image width={350} height={400} src="/images/place2.jpg" alt="location"/>
+        <Image width={350} height={400} src="/images/place3.jpg" alt="location"/>
+        <Image width={350} height={400} src="/images/place4.jpg" alt="location"/>
+        <Image width={350} height={400} src="/images/place5.jpg" alt="location"/>
+        <Image width={350} height={400} src="/images/place6.jpg" alt="location"/>
+        <Image width={350} height={400} src="/images/place7.jpg" alt="location"/>
+  </Marquee>
       </div>
     </div>
   );
