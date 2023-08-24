@@ -1,5 +1,5 @@
 import ContactCard from "@/components/contactPage/contactCard/ContactCard";
-import { FaFacebookF, FaLinkedinIn, FaRegEnvelopeOpen, FaTwitter } from "react-icons/fa";
+import { FaRegEnvelopeOpen } from "react-icons/fa";
 import { BsGeoAlt, BsTelephoneInbound } from "react-icons/bs";
 import ContactForm from "@/components/contactPage/contactForm/ContactForm";
 
