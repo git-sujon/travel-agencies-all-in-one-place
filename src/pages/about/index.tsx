@@ -1,14 +1,14 @@
+import * as React from "react";
+import Box from "@mui/material/Box";
+import Rating from "@mui/material/Rating";
+import StarIcon from "@mui/icons-material/Star";
 import Image from "next/image";
-import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
-import React, { useRef, useState } from "react";
-// Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
-// Import Swiper styles
+import Marquee from "react-fast-marquee";
+import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
 import "swiper/css";
 import "swiper/css/pagination";
-// import required modules
 import { Pagination } from "swiper/modules";
-import Marquee from "react-fast-marquee";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 const AboutPage = () => {
   return (
@@ -30,7 +30,8 @@ const AboutPage = () => {
               Pioneer in hospitality industry
             </h1>
             <p className="lg:text-2xl font bold text-neutral-300">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat quod quidem quae facere, accusantium recusandae?
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat
+              quod quidem quae facere, accusantium recusandae?
               <br />
               We serve experience, quality & hermony since 1995.
             </p>
@@ -140,6 +141,15 @@ const AboutPage = () => {
               />
               <div className="px-6 py-4">
                 <div className="font-bold text-xl mb-2">Michale John</div>
+                <Rating
+                  name="text-feedback"
+                  value={10}
+                  readOnly
+                  precision={0.5}
+                  emptyIcon={
+                    <StarIcon style={{ opacity: 0.55 }} fontSize="inherit" />
+                  }
+                />
                 <p className="text-gray-700 text-base">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                   Voluptatibus quia, nulla! Maiores et perferendis eaque,
@@ -169,6 +179,15 @@ const AboutPage = () => {
               />
               <div className="px-6 py-4">
                 <div className="font-bold text-xl mb-2">Thomas Adam</div>
+                <Rating
+                  name="text-feedback"
+                  value={10}
+                  readOnly
+                  precision={0.5}
+                  emptyIcon={
+                    <StarIcon style={{ opacity: 0.55 }} fontSize="inherit" />
+                  }
+                />
                 <p className="text-gray-700 text-base">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                   Voluptatibus quia, nulla! Maiores et perferendis eaque,
@@ -198,6 +217,15 @@ const AboutPage = () => {
               />
               <div className="px-6 py-4">
                 <div className="font-bold text-xl mb-2">Mark Antony</div>
+                <Rating
+                  name="text-feedback"
+                  value={10}
+                  readOnly
+                  precision={0.5}
+                  emptyIcon={
+                    <StarIcon style={{ opacity: 0.55 }} fontSize="inherit" />
+                  }
+                />
                 <p className="text-gray-700 text-base">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                   Voluptatibus quia, nulla! Maiores et perferendis eaque,
@@ -227,6 +255,15 @@ const AboutPage = () => {
               />
               <div className="px-6 py-4">
                 <div className="font-bold text-xl mb-2">Bill Thomas</div>
+                <Rating
+                  name="text-feedback"
+                  value={10}
+                  readOnly
+                  precision={0.5}
+                  emptyIcon={
+                    <StarIcon style={{ opacity: 0.55 }} fontSize="inherit" />
+                  }
+                />
                 <p className="text-gray-700 text-base">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                   Voluptatibus quia, nulla! Maiores et perferendis eaque,
@@ -256,6 +293,15 @@ const AboutPage = () => {
               />
               <div className="px-6 py-4">
                 <div className="font-bold text-xl mb-2">Carl Urban</div>
+                <Rating
+                  name="text-feedback"
+                  value={10}
+                  readOnly
+                  precision={0.5}
+                  emptyIcon={
+                    <StarIcon style={{ opacity: 0.55 }} fontSize="inherit" />
+                  }
+                />
                 <p className="text-gray-700 text-base">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                   Voluptatibus quia, nulla! Maiores et perferendis eaque,
