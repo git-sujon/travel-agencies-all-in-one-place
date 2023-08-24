@@ -1,3 +1,4 @@
+import RootLayout from '@/components/layout/RootLayout';
 import React from 'react';
 
 const TestPage = () => {
@@ -9,3 +10,8 @@ const TestPage = () => {
 };
 
 export default TestPage;
+
+TestPage.getLayout = function getLayout(page: React.ReactNode) {
+    return <RootLayout>{page}</RootLayout>;
+  };
+  
