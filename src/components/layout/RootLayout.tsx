@@ -1,7 +1,8 @@
 import Footer from "../UI/Shared/Footer";
-import Navbar from "../UI/Shared/Navbar";
+
 
 import { Toaster } from "react-hot-toast";
+import Navbar from "../UI/Shared/Navar";
 
 interface RootLayoutProps {
   children: React.ReactNode;
