@@ -1,5 +1,6 @@
-import Navbar from "../UI/Shared/Navbar";
 import Footer from "../UI/Shared/Footer";
+import Navbar from "../UI/Shared/Navbar";
+
 import { Toaster } from "react-hot-toast";
 
 interface RootLayoutProps {
