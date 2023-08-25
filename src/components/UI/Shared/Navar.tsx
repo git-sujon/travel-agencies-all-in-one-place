@@ -46,7 +46,7 @@ const Navbar = () => {
                 <div className={` ${profileOpen ? "hidden" : ""} `}>
                   <div
                     onClick={() => setProfileOpen(!profileOpen)}
-                    className="absolute  right-0 z-10 mt-4 w-40 origin-top-right rounded-md border border-gray-100 bg-accent shadow-lg"
+                    className="absolute right-0 z-10 mt-4 w-40 origin-top-right rounded-md border border-gray-100 bg-accent shadow-lg"
                     role="menu"
                   >
                  <div className="p-2">

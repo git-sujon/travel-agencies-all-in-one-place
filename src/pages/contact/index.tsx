@@ -2,6 +2,7 @@ import ContactCard from "@/components/contactPage/contactCard/ContactCard";
 import { FaRegEnvelopeOpen } from "react-icons/fa";
 import { BsGeoAlt, BsTelephoneInbound } from "react-icons/bs";
 import ContactForm from "@/components/contactPage/contactForm/ContactForm";
+import RootLayout from "@/components/layout/RootLayout";
 
 const ContactUsPage = () => {
     return (
@@ -22,3 +23,7 @@ const ContactUsPage = () => {
 };
 
 export default ContactUsPage;
+
+ContactUsPage.getLayout = function getLayout(page: React.ReactNode) {
+    return <RootLayout>{page}</RootLayout>;
+  };
