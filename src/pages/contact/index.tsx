@@ -6,8 +6,8 @@ import RootLayout from "@/components/layout/RootLayout";
 
 const ContactUsPage = () => {
     return (
-        <div className=' font-serif'>
-            <div className="max-w-[1200px] mx-auto border min-h-screen">
+        <div className=' font-serif max-container'>
+            <div className="md:mt-12">
                 {/* contact section */}
                 <div className="grid md:grid-cols-3 py-7 md:py-12">
                     <ContactCard icon={<FaRegEnvelopeOpen className="w-5 h-5 lg:w-8 lg:h-8"></FaRegEnvelopeOpen>} title={"Email:"} value={"travel2023@gmail.com"}></ContactCard>
