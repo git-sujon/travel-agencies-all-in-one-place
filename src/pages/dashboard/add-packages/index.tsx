@@ -4,8 +4,6 @@ const AddPackagePage = () => {
   const [guideNum, setGuideNum] = useState(1);
   const [isChecked, setIsChecked] = useState(false);
 
-  console.log(isChecked);
-
   const handleGuides = () => {
     setGuideNum(guideNum + 1);
   };
