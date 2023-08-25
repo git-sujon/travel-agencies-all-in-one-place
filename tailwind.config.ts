@@ -30,6 +30,6 @@ module.exports = {
         accent: "#25262c",
       },
     },
-    plugins: [],
+    plugins: [require("daisyui")],
   },
 };
