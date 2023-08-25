@@ -2,16 +2,26 @@ import RootLayout from '@/components/layout/RootLayout';
 import Link from 'next/link';
 import React, { useState } from 'react';
 
+
 const SignUp = () => {
     const [error, setError] = useState('')
-    const handleSignIn = (e: React.FormEvent<HTMLFormElement>) => {
+    const handleSignIn = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        const email = e.currentTarget.email.value;
-        const password = e.currentTarget.password.value;
-        console.log(email, password);
-        if (email === '' || password === '') {
-            setError('Please give your email and password');
+        const form = e.currentTarget;
+        const name = form.name.value;
+        const email = form.email.value;
+        const password = form.password.value;
+        const photo = form.photo.value;
+        if (name === '' || email === '' || password === '') {
+            setError('Please give your name, email, password and photo');
         }
+        const user = {
+            name,
+            email,
+            password,
+            photo
+        }
+        console.log(user)
     }
     return (
         <div className='min-h-[100vh]'>
@@ -24,7 +34,8 @@ const SignUp = () => {
                             <input type="text" name='name' className='w-full rounded outline-none h-8 px-2 text-black  mt-4 border-b' placeholder='Name' />
                             <input type="email" name='email' className='w-full rounded outline-none h-8 px-2 text-black  mt-4 border-b' placeholder='Email' />
                             <input type="password" name='password' className='w-full rounded outline-none h-8 px-2 text-black  mt-4 border-b' placeholder='Password' />
-                            <input type="file" className="file-input mt-4 bg-transparent file-input-bordered file-input-sm w-full " />
+                            <input type="text" name='photo' className='w-full rounded outline-none h-8 px-2 text-black  mt-4 border-b' placeholder='Photo Url' />
+                            
                             <button className='text-lg font-semibold font-mono text-white bg-primary hover:bg-secondary duration-300 w-full py-1 rounded mt-5 btn-hover-effect'>Sign Up</button>
                         </form>
                         <p className='text-center text-slate-600 mt-3'>Forget <span className='cursor-pointer hover:underline hover:text-red-400'>password</span> ?</p>
