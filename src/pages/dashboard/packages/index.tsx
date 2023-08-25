@@ -1,8 +1,6 @@
 import DashboardLayout from "@/components/layout/DashboardLayout";
 import { packagesData } from "@/components/static/pakagesData";
-import React from "react";
-
-
+import { GoDotFill } from "react-icons/go";
 
 const AllPackages = () => {
   return (
@@ -29,7 +27,10 @@ const AllPackages = () => {
         </thead>
         <tbody className="block md:table-row-group">
           {packagesData.map((pkg) => (
-            <tr key={pkg.id} className="bg-gray-200 border border-grey-500 md:border-none block md:table-row">
+            <tr
+              key={pkg.id}
+              className="bg-gray-200 border border-grey-500 md:border-none block md:table-row"
+            >
               <td className="p-2 md:border md:border-grey-500 text-left block md:table-cell">
                 {pkg.name}
               </td>
@@ -40,16 +41,36 @@ const AllPackages = () => {
                 {pkg.price}
               </td>
               <td className="p-2 md:border md:border-grey-500 text-left block md:table-cell">
-                {pkg.status}
+                <GoDotFill
+                  className={`${
+                    pkg.status === "active" ? "text-green-600" : "text-red-600"
+                  }`}
+                />
               </td>
               <td className="p-2 md:border md:border-grey-500 text-left block md:table-cell text-sm">
                 <button className="bg-primary hover:bg-blue-900 text-white font-bold py-1 px-2 border border-blue-500 rounded mr-2">
-                Payment
+                  Payment
                 </button>
-                <button className="bg-amber-300 hover:bg-amber-800 hover:text-white font-bold py-1 px-2 border border-amber-500 rounded mr-2">
-                 Edit
+                <button
+                  className={`bg-amber-300 hover:bg-amber-800 hover:text-white font-bold py-1 px-2 border border-amber-500 rounded mr-2 ${
+                    pkg.status === "inactive"
+                      ? "opacity-50 cursor-not-allowed"
+                      : ""
+                  }`}
+                //   onClick={() => handleDisablePackage(pkg.id)}
+                  disabled={pkg.status === "inactive"}
+                >
+                  Disable
                 </button>
-                <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-2 border border-red-500 rounded mr-2">
+
+                <button className="bg-teal-600 hover:bg-teal-900 text-white font-bold py-1 px-2 border border-teal-500 rounded mr-2">
+                  Edit
+                </button>
+
+                <button
+                  className="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-2 border border-red-500 rounded mr-2"
+                  disabled={pkg.status}
+                >
                   Delete
                 </button>
               </td>

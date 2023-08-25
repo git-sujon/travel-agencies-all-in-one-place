@@ -4,14 +4,14 @@ export const packagesData = [
     name: "Exotic Island Getaway",
     duration: "7 days",
     price: "$1999",
-    status: "active",
+    status: "inactive",
   },
   {
     id: 2,
     name: "Cultural Europe Tour",
     duration: "10 days",
     price: "$2499",
-    status: "inactive",
+    status: "active",
   },
   {
     id: 3,
@@ -39,7 +39,7 @@ export const packagesData = [
     name: "Tropical Paradise Escape",
     duration: "8 days",
     price: "$2199",
-    status: "inactive",
+    status: "active",
   },
   {
     id: 7,
