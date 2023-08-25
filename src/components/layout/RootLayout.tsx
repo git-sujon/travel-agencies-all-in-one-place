@@ -13,7 +13,7 @@ const RootLayout = ({ children }: RootLayoutProps) => {
     <>
       <Toaster />
       <Navbar />
-      <div className="min-h-screen container">
+      <div className="min-h-screen">
         <div className="">{children}</div>
       </div>
       <Footer />
