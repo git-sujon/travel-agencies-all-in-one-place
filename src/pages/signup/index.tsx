@@ -15,6 +15,10 @@ const SignUp = () => {
         if (name === '' || email === '' || password === '') {
             setError('Please give your name, email, password and photo');
         }
+        else if(!/^(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&*()_+{}|:;<>,.?~])(?=.{8,})/.test(password)){
+            setError('Password must be at least 6 characters and must contain at least one uppercase letter, one lowercase letter, one number and one special character')
+            return;
+        }
         const user = {
             name,
             email,
@@ -38,7 +42,6 @@ const SignUp = () => {
                             
                             <button className='text-lg font-semibold font-mono text-white bg-primary hover:bg-secondary duration-300 w-full py-1 rounded mt-5 btn-hover-effect'>Sign Up</button>
                         </form>
-                        <p className='text-center text-slate-600 mt-3'>Forget <span className='cursor-pointer hover:underline hover:text-red-400'>password</span> ?</p>
                         <div className='my-5 flex items-center justify-between'>
                             <hr className='w-[40%]' />
                             <p className='text-slate-500'>or</p>
