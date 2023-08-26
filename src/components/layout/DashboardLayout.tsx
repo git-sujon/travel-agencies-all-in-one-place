@@ -1,6 +1,7 @@
 import { GiHamburgerMenu} from "react-icons/gi";
 import {GrChapterAdd } from "react-icons/gr";
 import {SiYourtraveldottv } from "react-icons/si";
+import {FaClipboardList, FaUsers } from "react-icons/fa";
 import {
 
   BiSolidDashboard,
@@ -57,7 +58,7 @@ const DashboardLayout = ({ children }: RootLayoutProps) => {
    
                <div id="menu" className="flex flex-col space-y-2">
                  <Link
-                   href="/dashboard"
+                   href="/dashboard/packages"
                    className="  font-medium border-b hover:border-b-0 py-2 px-2 hover:bg-primary hover: hover:text-white rounded-md transition duration-150 ease-in-out flex items-center gap-1"
                  >
                    <SiYourtraveldottv />
@@ -69,6 +70,20 @@ const DashboardLayout = ({ children }: RootLayoutProps) => {
                  >
                    <GrChapterAdd />
                    <span className="text-sm lg:text-lg">Add Packages</span>
+                 </Link>
+                 <Link
+                   href="/dashboard/orders"
+                   className="  font-medium border-b hover:border-b-0 py-2 px-2 hover:bg-primary hover: hover:text-white rounded-md transition duration-150 ease-in-out flex items-center gap-1"
+                 >
+                   <FaClipboardList />
+                   <span className="text-sm lg:text-lg">Orders</span>
+                 </Link>
+                 <Link
+                   href="/dashboard/users"
+                   className="  font-medium border-b hover:border-b-0 py-2 px-2 hover:bg-primary hover: hover:text-white rounded-md transition duration-150 ease-in-out flex items-center gap-1"
+                 >
+                   <FaUsers />
+                   <span className="text-sm lg:text-lg">All Users</span>
                  </Link>
                  <button
                    onClick={() => handleLogout()}

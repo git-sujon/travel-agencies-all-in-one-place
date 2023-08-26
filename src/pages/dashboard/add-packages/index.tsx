@@ -1,3 +1,4 @@
+import DashboardLayout from "@/components/layout/DashboardLayout";
 import React, { useState } from "react";
 
 const AddPackagePage = () => {
@@ -274,3 +275,8 @@ const AddPackagePage = () => {
 };
 
 export default AddPackagePage;
+
+
+AddPackagePage.getLayout = function getLayout(page: React.ReactNode) {
+  return <DashboardLayout>{page}</DashboardLayout>;
+};
