@@ -4,7 +4,11 @@ import React, { useState } from 'react';
 
 const LoginPage = () => {
     const [error, setError] = useState('');
-
+    const [agency, setAgency] = useState(false);
+    // make sure the user as an agency or not 
+    const checkAgency = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setAgency(!agency);
+    }
     const handleLogin = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         const email = e.currentTarget.email.value;
@@ -20,6 +24,10 @@ const LoginPage = () => {
                 <div className=' bg-white border shadow-xl h-fit max-w-[400px] mt-36 md:mt-44 rounded-md p-4 md:px-8'>
                     <p className='text-red-500 text-center my-2 text-sm'>{error}</p>
                     <h1 className='font-bold text-2xl text-center primary-color'>Sign In</h1>
+                    <div className='mt-2 flex justify-center'>
+                        <input type="checkbox" onChange={checkAgency} name="agency" className='mr-2' />
+                        <label htmlFor="agency" className='text-sm font-medium text-accent'>Sign in for an agency</label>
+                    </div>
                     <div className='my-3'>
                         <form onSubmit={handleLogin}>
                             <input type="email" name='email' className='w-full rounded outline-none h-8 px-2 text-black  mt-4 border-b' placeholder='Your Email' />
