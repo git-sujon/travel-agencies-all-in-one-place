@@ -15,11 +15,11 @@ const PackagesFiltering = () => {
           <option disabled selected>
             Select Region
           </option>
-          <option>Homer</option>
-          <option>Marge</option>
-          <option>Bart</option>
-          <option>Lisa</option>
-          <option>Maggie</option>
+          <option>Bangladesh</option>
+          <option>Sri-Lanka</option>
+          <option>Thailand</option>
+          <option>Europe</option>
+          <option>Mal-dives</option>
         </select>
       </div>
       <div className="flex flex-col gap-2">
@@ -59,7 +59,7 @@ const PackagesFiltering = () => {
         />
       </div>
       <div className="flex w-full h-full items-center justify-center">
-        <button className="px-3 h-fit py-2 w-full bg-secondary hover:bg-primary duration-300 mt-7 rounded-md">
+        <button className="px-3 h-fit py-2 w-full bg-secondary hover:bg-primary duration-300 mt-7 rounded-md font-semibold text-white tracking-widest">
           Search
         </button>
       </div>
