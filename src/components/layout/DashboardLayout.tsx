@@ -12,6 +12,11 @@ import { MdFormatListBulletedAdd } from "react-icons/md";
 import { Toaster } from "react-hot-toast";
 import Link from "next/link";
 import { useState } from "react";
+import { useAppDispatch } from '@/components/redux/hooks'
+import { setLoading, setUser } from '@/components/redux/features/user/userSlice'
+import { onAuthStateChanged } from 'firebase/auth'
+import { auth } from '@/components/lib/Firebase'
+import { useEffect } from 'react'
 
 interface RootLayoutProps {
     children: React.ReactNode;
@@ -19,9 +24,22 @@ interface RootLayoutProps {
 
 
 const DashboardLayout = ({ children }: RootLayoutProps) => {
-
-
   const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  const dispatch = useAppDispatch();
+
+  useEffect(() => {
+    dispatch(setLoading(true));
+    onAuthStateChanged(auth, (user) => {
+      if (auth && user) {
+        dispatch(setUser(user));
+
+        dispatch(setLoading(false));
+      } else {
+        dispatch(setLoading(false));
+      }
+    });
+  }, [dispatch]);
 
   const handleLogout = async() => {
    
