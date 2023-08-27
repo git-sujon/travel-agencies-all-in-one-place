@@ -2,6 +2,21 @@ import React from 'react';
 import { BsStopwatch, BsPerson,BsStarFill } from "react-icons/bs";
 import Image from 'next/image';
 
+interface PackageCardProps {
+    package: {
+        id: string | number,
+        title: string,
+        image: string,
+        duration: string,
+        price: number,
+        region: string,
+        alreadyBooked: number,
+        description: string,
+        rating: number,
+        date: string
+    };
+}
+
 const PackageCard = () => {
     return (
         <div className=' w-full '>
