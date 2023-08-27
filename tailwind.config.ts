@@ -8,6 +8,11 @@ module.exports = {
     // Or if using `src` directory:
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  "compilerOptions": {
+    "types": [
+      "react-datepicker"
+    ]
+  },
   theme: {
     container: {
       center: true,
