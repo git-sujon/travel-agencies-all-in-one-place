@@ -1,12 +1,16 @@
+import BookingForm from '@/components/UI/bookingForm/BookingForm';
 import RootLayout from '@/components/layout/RootLayout';
 import Image from 'next/image';
 import React from 'react';
 
 const PackagesDetails = () => {
     return (
-        <div className='max-container min-h-screen grid md:grid-cols-2 pt-8'>
-            <div className='w-full'>
+        <div className='max-container min-h-screen grid md:grid-cols-2 pt-8 gap-10 justify-items-center'>
+            <div className='w-full flex flex-col items-center'>
                 <Image src="https://bonvoyage.qodeinteractive.com/wp-content/uploads/2018/02/tour-2-img-5.jpg" alt="package banner" width={500} height={500} />
+                <div className='mt-8'>
+                    <BookingForm></BookingForm>
+                </div>
             </div>
             <div className='w-full'>
                 <h1 className='text-xl md:text-2xl font-bold text-accent mb-3'>Lake Panama</h1>
