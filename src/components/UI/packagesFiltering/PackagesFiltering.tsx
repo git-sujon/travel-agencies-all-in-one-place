@@ -46,7 +46,7 @@ const PackagesFiltering = () => {
         <DatePicker
           className="px-3 py-2 bg-slate-100 outline-none rounded-md text-sm w-full"
           selected={startDate}
-          onChange={(date) => setStartDate(date)}
+          onChange={(date: Date) => setStartDate(date)}
         />
       </div>
       <div className="flex flex-col gap-2">
