@@ -1,14 +1,14 @@
 import { configureStore } from '@reduxjs/toolkit'
 import paginationReducer from './features/pagination/paginationSlice'
 import sortingReducer from './features/sorting/sortingSlice'
-
+import { api } from './api/apiSlice'
 // ...
 
 export const store = configureStore({
   reducer: {
     pagination:paginationReducer,
     sort:sortingReducer,
-
+    [api.reducerPath]: api.reducer,
   },
 })
 
