@@ -55,7 +55,8 @@ export const api = createApi({
 
     getAllUsers: builder.query({
       query: ({ page, limit, sortField, sortValue }) =>
-        `/users?page=${page}&limit=${limit}&${sortField}=${sortValue}`,
+        // `/users?page=${page}&limit=${limit}&${sortField}=${sortValue}`,
+        `/users`,
       providesTags: ["addUser", "updateUser", "deleteUser"],
     }),
     getSingleUser: builder.query({
@@ -83,7 +84,8 @@ export const api = createApi({
 
     getAllPackages: builder.query({
       query: ({ page, limit, sortField, sortValue }) =>
-        `/packages?page=${page}&limit=${limit}&${sortField}=${sortValue}`,
+        // `/packages?page=${page}&limit=${limit}&${sortField}=${sortValue}`,
+        `/packages?page=${page}&limit=${limit}`,
       providesTags: ["addPackage", "updatePackage", "deletePackage"],
     }),
     getSinglePackage: builder.query({
@@ -119,7 +121,8 @@ export const api = createApi({
 
     getAllAgencies: builder.query({
       query: ({ page, limit, sortField, sortValue }) =>
-        `/agencies?page=${page}&limit=${limit}&${sortField}=${sortValue}`,
+        // `/agencies?page=${page}&limit=${limit}&${sortField}=${sortValue}`,
+        `/agencies`,
       providesTags: ["addAgency", "updateAgency", "deleteAgency"],
     }),
     getSingleAgency: builder.query({
