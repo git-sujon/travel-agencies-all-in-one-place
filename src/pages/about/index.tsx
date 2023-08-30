@@ -9,6 +9,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import RootLayout from "@/components/layout/RootLayout";
 
 const AboutPage = () => {
   return (
@@ -116,7 +117,8 @@ const AboutPage = () => {
           <h2 className="font-bold text-4xl mb-8">Most trusted Guides</h2>
           <p className="text-xl">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. <br />
-            Praesentium quod suscipit atque dolore aspernatur ipsum perspiciatis <br />
+            Praesentium quod suscipit atque dolore aspernatur ipsum perspiciatis{" "}
+            <br />
             fugit nisi autem obcaecati?
           </p>
         </div>
@@ -328,7 +330,8 @@ const AboutPage = () => {
           <h2 className="font-bold text-4xl mb-8">Our Tourist Locations</h2>
           <p className="text-xl">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. <br />
-            Praesentium quod suscipit atque dolore aspernatur ipsum perspiciatis <br />
+            Praesentium quod suscipit atque dolore aspernatur ipsum perspiciatis{" "}
+            <br />
             fugit nisi autem obcaecati?
           </p>
         </div>
@@ -382,3 +385,7 @@ const AboutPage = () => {
 };
 
 export default AboutPage;
+
+AboutPage.getLayout = function getLayout(page: React.ReactNode) {
+  return <RootLayout>{page}</RootLayout>;
+};
